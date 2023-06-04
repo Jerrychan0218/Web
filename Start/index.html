@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--這一行是在告知電腦，這個網站同時會給手機操作-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--這一行是在告知電腦，這個網站同時會給手機操作-->
+        <title>孤行錄</title>
+        <!--載入bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!--載入google 字體-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+        <!--載入主頁的css = style.css-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--載入網路上字體動畫css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+    <body>
+        <header>
+        <!--nav 是頁面最上面的導覽欄-->    
+        <nav class="zone white sticky">
+        <!--設定導覽欄的內容-->
+        <ul class="main-nav">
+            <li class="title"><a href = 'index.html'><strong>孤行錄</strong></a></li>
+            <li class="intro"><a href = 'page2.html'>作者簡介</a></li>
+            <li class="ep"><a href = 'page3.html'>章節</a></li>
+            <li class="back"><a href = 'page4.html'>故事設定</a></li>
+            <li class="contact"><a href = 'page5.html'>聯絡我</a></li>
+        </ul>  
+        </header>
+        <!--置中文字用，d-flex是bootstrap css的功能，css的部分在bootstrap的系統中，我們是用現成的，h-100是指把網頁分成100份-->
+        <div class="container d-flex align-items-center justify-content-center h-100"> 
+            <div class="row">
+                <!--置中-->
+                <header class="text-center col-12">  
+                    <h1 class="animate__animated animate__bounce"><strong>孤行錄</strong></h1>
+                </header>
+                <!--置中-->
+                <section class="text-center col-12">
+                    <hr>
+                    <!--登入用的外包網站，暫時沒有用-->
+                    <a href="https://mailchi.mp/23b4ea3098d2/u0c4r3iuwd">
+                        <!--設定按鈕-->
+                        <button type="button" class="btn btn-secondary btn-1"><strong>踏入江湖</strong></button>
+                    </a>
+                </section>
+            </div>
+        </div>
+    </body>
+    <!--設定網站最下面的欄位-->
+    <footer class="bottom d-flex justify-content-center">Created by J.C.</footer>
+</html>
