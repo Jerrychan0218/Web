@@ -8,6 +8,8 @@
 
 .box{
     width:50%;
+    text-align: center;
+    align-items: center;
     transition: all 0.3s;
 }   
 
