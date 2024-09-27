@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import CardList from './CardList';
-import SearchBox from './SearchBox';
-import Scroll from './Scroll';
+import CardList from '../component//CardList';
+import SearchBox from '../component/SearchBox';
+import Scroll from '../component/Scroll';
+import ErrorBoundary from '../component/ErrorBoundary';
 // import { robots } from './robots.js'
 import './App.css'
 
@@ -32,20 +33,29 @@ SChange = (event) => { //在React底下創造一個function，arrow function 需
 }
 
     render() {
-        const filtered = this.state.robots.filter(robots =>{
-            return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase()); //如果在searchfield輸入的東西，是robot所包含的，則return出來
+        const {robots, searchfield} = this.state; //所謂的destructuring，這樣可以簡化程式碼，下方的this.state可以刪掉//
+        const filtered = robots.filter(robot =>{
+            return robot.name.toLowerCase().includes(searchfield.toLowerCase()); //如果在searchfield輸入的東西，是robot所包含的，則return出來
         })
-        return(
-            <div className = 'tc'>
-                <h1 className = 'f1'>RoboFriends</h1>
-                <SearchBox searchChange = {this.SChange}/> {/*因為是object所以要用this, this 代表App*/}
-                {/* <CardList robots = {this.state.robots}/> robots = ... 這個robots是jsx裡定義的const robots */}
-                <Scroll>
-                  <CardList robots = {filtered}/> {/*把filtered的東西選出來render在網頁上*/}
-                </Scroll>
-                
-            </div>
-        );
+
+        return !robots.length ? //如果length=0 為true，則顯示no friends here，如果false則顯示，綠字可以簡化成這樣//
+            <h1>No friends here</h1>:
+            (
+        // if (!robots.length){
+        //     return <h1>No friends here</h1>
+        // }else{
+        //     return( 
+                <div className = 'tc'>
+                    <h1 className = 'f1'>RoboFriends</h1>
+                    <SearchBox searchChange = {this.SChange}/> {/*因為是object所以要用this, this 代表App*/}
+                    {/* <CardList robots = {this.state.robots}/> robots = ... 這個robots是jsx裡定義的const robots */}
+                    <Scroll>
+                        <ErrorBoundary>
+                            <CardList robots = {filtered}/> {/*把filtered的東西選出來render在網頁上*/}
+                        </ErrorBoundary>
+                    </Scroll>
+                </div>
+            );
+        }        
     }
-}
 export default App;
