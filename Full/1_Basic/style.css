@@ -1,0 +1,54 @@
+body{
+    background-image: url("./golden.jp");
+    background-size:cover;
+}
+
+p{
+    padding:1rem;
+    border: black solid 2px;
+    width:fit-content;
+    border-radius: 20%;
+}
+
+p:hover{
+    color:red;     
+}
+
+h1{
+    padding:10px 10px;
+}
+
+div.container{
+    border: 3px solid;
+    width: 500px;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+}
+
+.box{
+    width: 250px;
+    height: 250px;
+}
+
+.box1{
+    background-color: yellow;
+}
+
+.box2{
+    background-color: brown;
+}
+
+.box3{
+    background-color: blue;
+}
+
+.box4{
+    background-color: blanchedalmond;
+}
+
+.box5{
+    background-color: cornflowerblue;
+}
+
+
