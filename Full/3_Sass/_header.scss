@@ -1,0 +1,20 @@
+//scss，這樣就方便針對每一層進行設定//
+header{
+    nav{
+        ul{
+            display:flex;
+            flex-wrap:wrap;
+            padding-left: 1.5em;
+            li{
+                list-style-type: square;
+                a{
+                    &:hover{ //&是self ampersand，也就是對自己做什麼//
+                        color:green;
+                    }
+                    color: $themeColor;
+                    text-decoration:none;
+                } 
+            }
+        }
+    }
+}

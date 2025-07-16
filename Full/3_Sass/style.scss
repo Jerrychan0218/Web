@@ -1,0 +1,41 @@
+// 按watch sass 就可以自動變css
+$themeColor: red; //$是css的var//
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//scss可以設定nest css//
+//平常用css//
+// header nav ul li{
+//     color: red;
+// }
+
+@import "./header"; //css import功能，導入其他sass功能，重複使用//
+
+@mixin flexbox($direction){ //mixin = css 的function功能//
+    display:flex;
+    flex-direction: $direction;
+}
+
+header{
+    nav{
+        ul{
+            @include flexbox(column); //mixin，direction 變數變為column//
+            flex-wrap:wrap;
+            padding-left: 1.5em;
+            li{
+                list-style-type: square;
+                a{
+                    &:hover{ //&是self ampersand，也就是對自己做什麼//
+                        color:green;
+                    }
+                    color: $themeColor;
+                    text-decoration:none;
+                } 
+            }
+        }
+    }
+}
