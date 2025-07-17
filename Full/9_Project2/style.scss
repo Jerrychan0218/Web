@@ -1,5 +1,96 @@
+$themeColor: rgb(228, 156, 156);
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+
+header{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    section.logo{
+        // flex-grow flex-shrink flex-basis
+        flex: 2 1 400px; 
+        align-items: center;
+        // border: 2px solid;
+        border-color:green;
+        // 設定為flex後才會變成並排
+        display: flex;
+        h1{
+            font-size: 2.5rem;
+        }
+        img{
+            width: 6vw;
+            height: 6vw;
+        }
+    }
+    
+    nav{
+        flex: 5 1 500px;
+        // border: 2px solid;
+        border-color: red;
+        ul{
+            display: flex;
+            // type of list dot
+            list-style-type: none;
+            justify-content: space-around;
+            li{
+                a{
+                color:black;
+                // border-bottom: solid red;
+                // decoration of the words
+                text-decoration: none;
+                font-size:1.35rem;
+                padding-bottom: 3px;
+                transition: all 0.15s ease;
+                &:hover{
+                    color: $themeColor;
+                    border-bottom: 3px solid $themeColor;
+                    // text-decoration: underline wavy rgb(243, 167, 167);
+                }
+                }
+            }
+        }
+    }
+}
+
+main{
+    section.background-img{
+        min-height: 70vh;
+        background-image: url("./images/日本櫻花.jpg");
+        // Using ‘cover’ makes the image fill the entire container
+        background-size: cover;
+        background-position: center;
+        transition: all 0.75s ease;
+        position: relative;
+        // Using z-index to decide the order of the container.
+        z-index: 0; 
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.filter{
+        background-color: rgb(0, 0, 0, 0.25);
+        width:100%;
+        min-height:70vh;
+        // position: absolute 的元素，會根據最近一個有 position: relative（或 absolute/fixed）的父元素作為定位基準。
+        position: absolute;
+        z-index:-1;
+    }
+
+    h3{
+        color:white;
+        font-size:2.5rem;
+        text-align: center;
+    }
 }

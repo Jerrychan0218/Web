@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>日本旅遊資訊網</title>
+    <!-- font-awesome導入 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <header>
+        <section class="logo">
+            <img src="./images/網站Logo.svg" alt="日本網站logo">
+            <h1>日本旅遊資訊網</h1>
+        </section>
+        <nav>
+            <ul>
+                <!-- i tag imported font-awesome -->
+                <li><a href="#"><i class="fa-solid fa-plane"></i> 日本旅遊</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i> 會員登入</a></li>
+                <li><a href="#"><i class="fa-solid fa-calendar-check"></i> 預約行程</a></li>
+                <li><a href="#"><i class="fa-solid fa-phone-volume"></i> 聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="background-img">
+            <!-- To make a dark gray cover to accentuate the h3 words below-->
+            <div class="filter"></div>
+            <h3>日本旅遊資訊網，你的旅遊好夥伴。<br>現在加入會員即享抽獎機會！</br></h3>
+        </section>
+    </main>
+    <script>
+        setInterval(()=>{
+            let topBackground = document.querySelector("section.background-img");
+            if(topBackground.style.backgroundImage == 'url("./images/日本櫻花.jpg")'
+            ){
+                topBackground.style.backgroundImage = 'url("./images/京都古城.jpg")';
+            }else if (
+                topBackground.style.backgroundImage == 'url("./images/京都古城.jpg")'
+            ){
+                topBackground.style.backgroundImage = 'url("./images/大阪街頭.jpg")';
+            } else{
+                topBackground.style.backgroundImage = 'url("./images/日本櫻花.jpg")';
+            }
+        }, 3000);
+    </script>
 </body>
 </html>
