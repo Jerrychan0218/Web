@@ -37,19 +37,19 @@
             <h3>遊玩主題</h3>
             <div class="circles">
                 <div class="circle">
-                    <img src="./images/北海道雪景.jpg" alt="北海道雪景">
+                    <img title="北海道雪景" src="./images/北海道雪景.jpg" alt="北海道雪景">
                     <p>雪</p>
                 </div>
                 <div class="circle">
-                    <img src="./images/日本壽司.jpg" alt="日本壽司">
+                    <img title="日本壽司" src="./images/日本壽司.jpg" alt="日本壽司">
                     <p>食</p>
                 </div>
                 <div class="circle">
-                    <img src="./images/富士山.jpg" alt="富士山">
+                    <img title="富士山" src="./images/富士山.jpg" alt="富士山">
                     <p>山</p>
                 </div>
                 <div class="circle">
-                    <img src="./images/清水寺.jpg" alt="清水寺">
+                    <img title="清水寺" src="./images/清水寺.jpg" alt="清水寺">
                     <p>古</p>
                 </div>
             </div>
@@ -65,7 +65,30 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831455.1968400581!2d139.11044218627887!3d35.50744654758896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2z5p2x5Lqs6YO9!5e0!3m2!1szh-TW!2sjp!4v1752852569737!5m2!1szh-TW!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
-    <script>
+
+    <footer>
+        <section class="logo">
+            <img src="./images/網站Logo.svg" alt="logo" />
+            <h3>日本旅遊資訊網</h3>
+        </section>
+        <section class="links">
+            <a href="#"><img src="./Icons/facebook.svg" alt="facebook"></a>
+            <a href="#"><img src="./Icons/instagram.svg" alt="instagram"></a>
+            <a href="#"><img src="./Icons/twitter.svg" alt="twitter"></a>
+            <a href="#"><img src="./Icons/youtube.svg" alt="youtube"></a>
+        </section>
+    </footer>
+
+    <script class="mouse" src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js" 
+    integrity="sha512-P+NGabN/TJDOnCVOFJO+E06TBm4i+M8dTT91lWg/8UpwLrzicEXIypmABPpA47D0x6r+yxFHjYIZKWhc1h7xlQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+    color = "100,160,150"
+    opacity="0.7"
+    count="300">
+    </script>
+
+    <script class="displaying_pic">
         setInterval(()=>{
             let topBackground = document.querySelector("section.background-img");
             if(topBackground.style.backgroundImage == 'url("./images/日本櫻花.jpg")'
@@ -80,5 +103,6 @@
             }
         }, 3000);
     </script>
+    
 </body>
 </html>
