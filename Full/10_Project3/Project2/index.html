@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本旅遊資訊網</title>
+    <!-- font-awesome導入 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <img class="fixed-image" src="./images/富士山2.jpg" alt="fixed-images"/>
+    <header>
+        <section class="logo">
+            <img src="./images/網站Logo.svg" alt="日本網站logo">
+            <h1>日本旅遊資訊網</h1>
+        </section>
+        <nav>
+            <ul>
+                <!-- i tag imported font-awesome -->
+                <li><a href="#"><i class="fa-solid fa-plane"></i> 日本旅遊</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i> 會員登入</a></li>
+                <li><a href="#"><i class="fa-solid fa-calendar-check"></i> 預約行程</a></li>
+                <li><a href="#"><i class="fa-solid fa-phone-volume"></i> 聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="background-img">
+            <!-- To make a dark gray cover to accentuate the h3 words below-->
+            <div class="filter"></div>
+            <h3>日本旅遊資訊網，你的旅遊好夥伴。<br>現在加入會員即享抽獎機會！</br></h3>
+        </section>
+
+        <section class="info-circles">
+            <h3>遊玩主題</h3>
+            <div class="circles">
+                <div class="circle">
+                    <img title="北海道雪景" src="./images/北海道雪景.jpg" alt="北海道雪景">
+                    <p>雪</p>
+                </div>
+                <div class="circle">
+                    <img title="日本壽司" src="./images/日本壽司.jpg" alt="日本壽司">
+                    <p>食</p>
+                </div>
+                <div class="circle">
+                    <img title="富士山" src="./images/富士山.jpg" alt="富士山">
+                    <p>山</p>
+                </div>
+                <div class="circle">
+                    <img title="清水寺" src="./images/清水寺.jpg" alt="清水寺">
+                    <p>古</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="empty-container">
+            <h3>還在猶豫嗎？<br>事不宜遲，今天就來規劃行程吧！</br></h3>
+        </section>
+
+        <section class="google-map">
+            <h3>日本地理位置</h3>
+            <p>板主目前去過東京、橫濱、大阪、京都、北海道、長野、神戶、姬路、淡路島，你又會想去哪呢？</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831455.1968400581!2d139.11044218627887!3d35.50744654758896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2z5p2x5Lqs6YO9!5e0!3m2!1szh-TW!2sjp!4v1752852569737!5m2!1szh-TW!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <section class="logo">
+            <img src="./images/網站Logo.svg" alt="logo" />
+            <h3>日本旅遊資訊網</h3>
+        </section>
+        <section class="links">
+            <a href="#"><img src="./Icons/facebook.svg" alt="facebook"></a>
+            <a href="#"><img src="./Icons/instagram.svg" alt="instagram"></a>
+            <a href="#"><img src="./Icons/twitter.svg" alt="twitter"></a>
+            <a href="#"><img src="./Icons/youtube.svg" alt="youtube"></a>
+        </section>
+    </footer>
+
+    <script class="mouse" src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js" 
+    integrity="sha512-P+NGabN/TJDOnCVOFJO+E06TBm4i+M8dTT91lWg/8UpwLrzicEXIypmABPpA47D0x6r+yxFHjYIZKWhc1h7xlQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+    color = "100,160,150"
+    opacity="0.7"
+    count="300">
+    </script>
+
+    <script class="displaying_pic">
+        setInterval(()=>{
+            let topBackground = document.querySelector("section.background-img");
+            if(topBackground.style.backgroundImage == 'url("./images/日本櫻花.jpg")'
+            ){
+                topBackground.style.backgroundImage = 'url("./images/京都古城.jpg")';
+            }else if (
+                topBackground.style.backgroundImage == 'url("./images/京都古城.jpg")'
+            ){
+                topBackground.style.backgroundImage = 'url("./images/大阪街頭.jpg")';
+            } else{
+                topBackground.style.backgroundImage = 'url("./images/日本櫻花.jpg")';
+            }
+        }, 3000);
+    </script>
+    
+</body>
+</html>

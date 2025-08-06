@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;    
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+}
+
+body{
+    nav{
+        background-color: white;
+        ul{
+            display: flex;
+            li{
+                list-style-type: none;
+                margin: 1rem;
+                a{
+                    color: black;
+                    text-decoration: none;
+                    transition: all 0.1s;
+                    &:hover{
+                        color: rgb(6, 130, 165);
+                        background-color: rgba(189, 221, 231, 0.7);
+                        border-radius: 30%;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        section.main-area{
+            min-height: 70vh;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            div.info{
+                flex-basis:700px;
+                // border: 2px solid black;
+                padding: 1rem;
+                h1{
+                    font-size: 2.5rem;
+                }
+                h2{
+                    font-size: 1.5rem;
+                }
+                h3{
+                    font-size: 1rem;
+                }
+                a{
+                    color: white;
+                    background-color: rgb(6, 130, 165);
+                    padding: 0.25rem 0.5rem;
+                    font-size: 1rem;
+                    border-radius: 20px;
+                    display:inline-block;
+                    margin-top:2rem;
+                    text-decoration: none;
+                    transition: all 1s ease;
+                    &:hover{
+                        color:black;
+                        background-color: bisque;
+                    }
+                }
+            }
+
+            div.img-area{
+                flex-basis:450px;
+                // border: 2px solid red;
+                img{
+                    width:100%;
+                }
+            }
+        }
+
+        section.about-me{
+            background-color: rgba(189, 221, 231, 0.7);
+            padding: 5rem 0rem;
+            display: flex;
+            justify-content: center;
+
+            section.description{
+                width: 50%;
+                text-align: center;
+                h2{
+                    font-size: 2rem;
+                }
+                .progress-bar-area{
+                    p{
+                        margin-top:1.5rem;
+                    }
+                }
+            }
+        }
+
+        section.resume{
+            display:flex;
+            flex-wrap:wrap;
+            padding:2rem;
+
+            section.table{
+                flex: 5 1 500px;
+                border: red solid 2px;
+                padding: 2rem;
+                table{
+                    border-collapse: collapse;
+                    tr{
+                        border-bottom: 2px solid gray;
+                        transition: all 0.2s ease;
+                        &:hover{
+                            background-color: rgb(83, 140, 163);
+                            color: rgba(255,255,255);
+                        }
+                        td{
+                            padding:1rem;
+                        }
+                    }
+                }
+            }
+
+            section.picture{
+                flex: 1 1 500px;
+                border: black solid 2px;
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                // align-items的預設值是stretch, 這樣縮小畫面的時候就會拉長圖片
+                align-items: center;
+                img{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
