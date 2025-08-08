@@ -8,8 +8,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+body {
+  overflow-x: hidden;
+}
 body nav {
   background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 body nav ul {
   display: flex;
@@ -92,8 +98,7 @@ body main section.resume {
   padding: 2rem;
 }
 body main section.resume section.table {
-  flex: 5 1 500px;
-  border: red solid 2px;
+  flex: 5 0 500px;
   padding: 2rem;
 }
 body main section.resume section.table table {
@@ -112,12 +117,59 @@ body main section.resume section.table table tr td {
 }
 body main section.resume section.picture {
   flex: 1 1 500px;
-  border: black solid 2px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 body main section.resume section.picture img {
-  width: 80%;
+  width: 75%;
+}
+body main section.resume section.picture div.blueRect {
+  width: 25vw;
+  height: 75vh;
+  border: 10px solid rgb(54, 113, 137);
+  position: absolute;
+  top: 110px;
+  left: 150px;
+  z-index: -1;
+}
+body main section.resume section.picture div.blueRect2 {
+  width: 30vw;
+  height: 40vh;
+  border: 10px solid rgb(34, 73, 89);
+  position: absolute;
+  top: 200px;
+  left: -100px;
+  z-index: -1;
+}
+body main section.resume section.picture div.blueRect3 {
+  width: 20vw;
+  height: 30vh;
+  border: 10px solid rgb(127, 168, 184);
+  position: absolute;
+  top: 50px;
+  left: -40px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 800px) {
+  body main section.about-me section.description {
+    width: 80%;
+  }
+  body main section.resume {
+    overflow-x: auto;
+  }
+  body main section.resume section.picture div.blueRect, body main section.resume section.picture div.blueRect2, body main section.resume section.picture div.blueRect3 {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  body nav {
+    position: static;
+  }
+  body nav ul {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
